@@ -1,0 +1,415 @@
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+    --contrast-color: rgb(255, 35, 51);
+    --bg-color: rgb(244, 246, 247);
+    --hover-nav-logo: rgba(0, 0, 0, .5);
+}
+
+/****************************
+Estilos Generales
+*****************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 3.48vw;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .5);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 1.55rem;
+    margin-top: 2.4rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.28rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90.5%;
+}
+
+.txtl:hover {
+    text-decoration: underline;
+}
+
+
+/****************************
+Estilos Cabecera
+*****************************/
+
+h1 a {
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 1.2rem 0;
+}
+
+span {
+    font-weight: 400;
+    letter-spacing: -.47rem;
+}
+
+ul {
+    padding-left: 0;
+}
+
+nav {
+    margin-bottom: 1.9rem;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+nav a {
+    color: var(--primary-color);
+    border: none;
+}
+
+.active a {
+    color: var(--contrast-color);
+}
+
+nav a:hover,
+header a:hover {
+    color: var(--hover-nav-logo);
+}
+
+/****************************
+Estilos Pie de página
+*****************************/
+footer {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+footer ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+footer div div {
+    margin: 1rem auto;
+}
+
+footer a {
+    color: var(--secondary-color);
+    border: none;
+}
+
+footer a:hover {
+    color: var(--contrast-color);
+}
+
+footer img:hover {
+    opacity: .7;
+}
+
+/****************************
+index.html
+*****************************/
+
+.lema {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 19.2rem;
+    background-image: url(../img/bg-hero-home-m.jpg);
+    color: var(--secondary-color);
+    background-size: cover;
+}
+
+.item1 {
+    text-align: center;
+    font-size: 2.1rem;
+}
+
+.intro {
+    margin-bottom: 1.55rem;
+    margin-top: 2.4rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 3.55rem;
+    margin: 0 auto;
+    width: 82%;
+}
+
+.picture {
+    margin-block: 1rem;
+}
+
+picture img {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 1em;
+}
+
+article a:hover,
+.reducido:hover,
+.txtl:hover {
+    color: var(--primary-color);
+}
+
+article p,
+.fecha {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.reducido::before {
+    content: ">";
+    padding-right: .5rem;
+}
+
+.reducido {
+    font-weight: 700;
+}
+
+/*despacho-42.html*/
+.breadcrumb {
+    padding: 0 .5rem;
+}
+
+.breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: ">";
+}
+
+
+/****************************
+Media Screens
+*****************************/
+
+@media (min-width: 768px) {
+
+    /*General*/
+    html {
+        font-size: 1.7vw;
+    }
+
+    .container {
+        max-width: 88%;
+    }
+
+    p {
+        font-size: 1.7rem;
+    }
+
+    footer {
+        margin-top: 6rem;
+    }
+
+    /*index.html*/
+    .lema {
+        height: 22rem;
+    }
+
+    .item1 {
+        font-size: 3.5rem;
+        max-width: 80%;
+    }
+
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        column-gap: 1.8rem;
+        margin: 1rem auto;
+        width: 96%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    html {
+        font-size: 0.945vw;
+    }
+
+    p {
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+
+    h1,
+    nav {
+        text-align: left;
+        padding-left: 16vw;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-bottom: 1.55rem;
+        margin-top: 2.3rem;
+        text-align: center;
+        font-size: 2.1rem;
+    }
+
+    h3 {
+        font-size: 1.55rem;
+    }
+
+    .sticky {
+        justify-content: flex-start;
+        height: 3.960vw;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 1.35rem;
+        font-size: 1.08rem;
+    }
+
+    .intro {
+        margin: 0 auto;
+        max-width: 74%;
+    }
+
+    .lema {
+        background-image: url(../img/bg-hero-home.jpg);
+        line-height: 1;
+        height: 26.2rem;
+    }
+
+    .item1 {
+        font-size: 5.3rem;
+        max-width: 70%;
+    }
+
+    .container {
+        padding: 0 10vw;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 31%);
+        grid-template-rows: auto;
+        column-gap: 2.4rem;
+        margin: 0 auto;
+    }
+
+    article>p {
+        margin-top: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .fecha {
+        font-size: 0.9rem;
+    }
+
+    .reducido {
+
+        font-size: 0.75rem;
+    }
+
+    footer {
+        margin-top: 5rem;
+        padding-top: 2.1rem;
+        padding-bottom: 1.9rem;
+        font-size: .9rem;
+        text-align: left;
+    }
+
+    footer p {
+        line-height: 0.4;
+        font-size: .8rem;
+        color: var(--secondary-color);
+    }
+
+    footer li::after {
+        content: "·";
+        padding: 0 .5rem;
+    }
+
+    footer li:last-of-type::after {
+        content: "";
+    }
+
+    footer li {
+        display: inline;
+    }
+
+    footer img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: .8rem;
+        margin-top: 0;
+    }
+}
