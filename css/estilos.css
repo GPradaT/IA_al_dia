@@ -7,9 +7,13 @@
 }
 
 /****************************
+*****************************
 Estilos Generales
+*****************************
 *****************************/
-* {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,9 +38,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: var(--secondary-color);
-    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .5);
+    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .7);
 }
 
 abbr {
@@ -44,9 +49,10 @@ abbr {
 }
 
 h2 {
-    margin-bottom: 1.55rem;
+    margin-bottom: 2.4rem;
     margin-top: 2.4rem;
     text-align: center;
+    line-height: 1;
     font-size: 2.4rem;
     font-weight: 700;
 }
@@ -56,33 +62,16 @@ p {
     margin-bottom: 1rem;
 }
 
-a {
-    color: var(--contrast-color);
-    text-decoration: none;
-}
-
 .container {
     margin: 0 auto;
-    width: 90.5%;
+    width: 92%;
 }
 
-.txtl:hover {
-    text-decoration: underline;
-}
-
-
-/****************************
-Estilos Cabecera
-*****************************/
-
-h1 a {
-    color: var(--primary-color);
-}
-
+/************************EstilosCabecera**********************/
 h1 {
     text-align: center;
     font-size: 4rem;
-    margin: 1.2rem 0;
+    margin-top: 1.2rem;
 }
 
 span {
@@ -90,12 +79,8 @@ span {
     letter-spacing: -.47rem;
 }
 
-ul {
-    padding-left: 0;
-}
-
-nav {
-    margin-bottom: 1.9rem;
+.sticky ul {
+    padding: 1.1rem 0;
 }
 
 nav li {
@@ -106,24 +91,44 @@ nav li {
     line-height: 2rem;
 }
 
-nav a {
-    color: var(--primary-color);
-    border: none;
+/****************************Links**************************/
+a {
+    color: var(--contrast-color);
 }
 
+h1 a,
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav a:hover,
+h1 a:hover {
+    color: var(--hover-nav-logo);
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--contrast-color);
+}
+
+footer img:hover {
+    opacity: .7;
+}
+
+.active,
 .active a {
     color: var(--contrast-color);
 }
 
-nav a:hover,
-header a:hover {
-    color: var(--hover-nav-logo);
-}
 
-/****************************
-Estilos Pie de página
-*****************************/
+/*******************EstilosPieDePágina**********************/
 footer {
+    width: 100%;
     margin-top: 3rem;
     padding-top: 3rem;
     padding-bottom: 2vh;
@@ -135,7 +140,6 @@ footer {
 
 footer p {
     font-size: 1rem;
-    color: var(--secondary-color);
 }
 
 footer ul {
@@ -147,22 +151,58 @@ footer div div {
     margin: 1rem auto;
 }
 
-footer a {
-    color: var(--secondary-color);
-    border: none;
+.copyright {
+    line-height: .5;
 }
 
-footer a:hover {
-    color: var(--contrast-color);
-}
+/****************MediasGenerales*****************/
+@media (min-width: 768px) {
+    html {
+        font-size: 1.7vw;
+    }
 
-footer img:hover {
-    opacity: .7;
+    .sticky ul {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .container {
+        max-width: 92%;
+    }
+
+    p {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        margin-top: 4rem;
+        padding: 2rem;
+    }
+
+    footer .container div img:not(:last-child) {
+        width: 2rem;
+        height: 2rem;
+        padding: 1.6rem;
+    }
+
+    footer p {
+        font-size: 1.05rem;
+    }
+
+    footer div a svg {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
 }
 
 /****************************
 index.html
 *****************************/
+#inicio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
 .lema {
     display: flex;
@@ -175,7 +215,7 @@ index.html
     background-size: cover;
 }
 
-.item1 {
+.lema p {
     text-align: center;
     font-size: 2.1rem;
 }
@@ -185,117 +225,198 @@ index.html
     margin-top: 2.4rem;
 }
 
-.wrapper {
+#noticias {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 3.55rem;
     margin: 0 auto;
-    width: 82%;
+    width: 81%;
 }
 
-.picture {
-    margin-block: 1rem;
-}
-
-picture img {
+#noticias article img {
     width: 100%;
 }
 
-h3 {
-    font-size: 1.7rem;
+#noticias p.fecha {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
+
+#noticias a {
+    text-decoration: none;
+}
+
+#noticias h3 {
+    font-size: 1.69rem;
     line-height: 2rem;
     margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#noticias article p:last-of-type {
+    margin-top: 1rem;
+    font-size: 1.18rem;
 }
 
 article a:hover,
-.reducido:hover,
-.txtl:hover {
+.linkto:hover {
     color: var(--primary-color);
 }
 
-article p,
-.fecha {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
 
-.reducido::before {
+.linkto::before {
     content: ">";
     padding-right: .5rem;
+    font-weight: 400;
 }
 
-.reducido {
+.linkto {
+    font-size: 1rem;
     font-weight: 700;
 }
 
-/*despacho-42.html*/
-.breadcrumb {
-    padding: 0 .5rem;
-}
-
-.breadcrumb ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.breadcrumb li:not(:last-child)::after {
-    display: inline-block;
-    margin: 0 .25rem;
-    content: ">";
-}
-
-
-/****************************
-Media Screens
-*****************************/
-
+/****************MediaQuery*****************/
 @media (min-width: 768px) {
 
-    /*General*/
-    html {
-        font-size: 1.7vw;
-    }
-
-    .container {
-        max-width: 88%;
-    }
-
-    p {
-        font-size: 1.7rem;
-    }
-
-    footer {
-        margin-top: 6rem;
-    }
-
-    /*index.html*/
     .lema {
         height: 22rem;
     }
 
-    .item1 {
+    .lema p {
         font-size: 3.5rem;
         max-width: 80%;
     }
 
+    .intro {
+        margin-bottom: 1.55rem;
+        margin-top: 2.4rem;
+    }
 
-    .wrapper {
+    #noticias {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        column-gap: 1.8rem;
-        margin: 1rem auto;
-        width: 96%;
+        column-gap: 3.5%;
+        margin-top: 1rem;
+        width: 94%;
     }
 
+    #noticias p.fecha {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    #noticias h3 {
+        margin: 1rem 0;
+        font-size: 1.75rem;
+    }
+
+    #noticias article>p:last-of-type {
+        font-size: 1.24rem;
+    }
+
+    .linkto {
+        font-size: .9rem;
+        font-weight: 700;
+    }
 }
 
-@media (min-width: 1024px) {
+/****************************
+Aplicaciones.html
+*****************************/
+#apps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 2.5rem;
+    width: 100%;
+}
 
+.aplicaciones section h2 {
+    margin-top: 3rem;
+    font-size: 2.37rem;
+}
+
+#apps a {
+    text-decoration: none;
+}
+
+#apps h3 {
+    margin-bottom: 2.2rem;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+#apps div {
+    padding: 2.5rem;
+    background-color: var(--bg-color);
+    font-size: 1.18rem;
+}
+
+#apps .linkto:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#apps .linkto::before {
+    content: ">";
+    padding-right: .5rem;
+    font-weight: 400;
+}
+
+#apps .linkto {
+    font-size: .93rem;
+    font-weight: 700;
+    padding-top: 1.2rem;
+}
+
+/*despacho-42.html*/
+#breadcrumb .breadcrumb li {
+    font-weight: 400;
+}
+
+.breadcrumb ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+}
+
+.breadcrumb li:not(:first-child)::before {
+    display: inline-block;
+    content: ">";
+}
+
+/****************MediaQueries*****************/
+/****************************
+Media Screens
+*****************************/
+@media (min-width: 768px) {
+
+    #apps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 2.5rem;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    #apps p {
+        font-size: 1.4rem;
+    }
+
+    .linkto {
+        font-size: .9rem;
+        font-weight: 700;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    /********General********/
     html {
         font-size: 0.945vw;
     }
@@ -305,13 +426,8 @@ Media Screens
         font-weight: 400;
     }
 
-    h1,
-    nav {
-        text-align: left;
-        padding-left: 16vw;
-    }
-
     h1 {
+        text-align: left;
         margin-bottom: 0;
     }
 
@@ -320,10 +436,6 @@ Media Screens
         margin-top: 2.3rem;
         text-align: center;
         font-size: 2.1rem;
-    }
-
-    h3 {
-        font-size: 1.55rem;
     }
 
     .sticky {
@@ -337,46 +449,8 @@ Media Screens
         font-size: 1.08rem;
     }
 
-    .intro {
-        margin: 0 auto;
-        max-width: 74%;
-    }
-
-    .lema {
-        background-image: url(../img/bg-hero-home.jpg);
-        line-height: 1;
-        height: 26.2rem;
-    }
-
-    .item1 {
-        font-size: 5.3rem;
-        max-width: 70%;
-    }
-
     .container {
-        padding: 0 10vw;
-    }
-
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 31%);
-        grid-template-rows: auto;
-        column-gap: 2.4rem;
-        margin: 0 auto;
-    }
-
-    article>p {
-        margin-top: 1rem;
-        font-size: 1.05rem;
-    }
-
-    .fecha {
-        font-size: 0.9rem;
-    }
-
-    .reducido {
-
-        font-size: 0.75rem;
+        max-width: 69%;
     }
 
     footer {
@@ -393,6 +467,10 @@ Media Screens
         color: var(--secondary-color);
     }
 
+    footer li {
+        display: inline;
+    }
+
     footer li::after {
         content: "·";
         padding: 0 .5rem;
@@ -402,14 +480,55 @@ Media Screens
         content: "";
     }
 
-    footer li {
-        display: inline;
-    }
-
-    footer img {
+    footer img:not(:last-child) {
         width: 1.5rem;
         height: 1.5rem;
         margin-bottom: .8rem;
         margin-top: 0;
     }
+
+    /********index.html********/
+    .intro {
+        margin: 0 auto;
+        max-width: 73%;
+    }
+
+    .lema {
+        background-image: url(../img/bg-hero-home.jpg);
+        line-height: 1;
+        height: 26.2rem;
+    }
+
+    .lema p {
+        font-size: 5.3rem;
+        max-width: 70%;
+    }
+
+    #noticias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-content: space-between;
+        column-gap: 2.3rem;
+        width: 95%;
+    }
+
+    #noticias h3 {
+        font-size: 1.5rem;
+    }
+
+    #noticias p.fecha {
+        font-size: .9rem;
+    }
+
+    #noticias article p:last-of-type {
+        margin-top: 1rem;
+        font-size: 1.05rem;
+    }
+
+    #noticias .linkto {
+        font-size: .7rem;
+        font-weight: 700;
+    }
+
 }
