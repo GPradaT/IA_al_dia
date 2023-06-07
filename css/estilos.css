@@ -179,8 +179,10 @@ footer div div {
         padding: 2rem;
     }
 
-    footer .rrss img{
-       min-block-size: 2rem ;
+    footer div .rrss{
+        display: inline-block;
+        display: contents;
+        content: icon;
        margin-bottom: 1rem;
     }
 
