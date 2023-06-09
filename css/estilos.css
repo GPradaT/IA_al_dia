@@ -453,9 +453,9 @@ en-el-cine.html
 
 .cine blockquote {
     padding: 1.2rem 1rem;
-    margin-bottom: 6vh;
     background-color: var(--bg-color);
     font-size: 1.18rem;
+    margin-bottom: 3vh;
 }
 
 .cine blockquote cite:first-of-type {
@@ -469,6 +469,7 @@ en-el-cine.html
 
 @media (min-width:768px) {
     .cine blockquote {
+        margin-bottom: 2vh;
         font-size: 1.26rem;
     }
 
@@ -477,20 +478,27 @@ en-el-cine.html
 @media (min-width: 1200px) {
     .cine blockquote {
         font-size: 1rem;
-        margin-bottom: 2vh;
     }
-    .v1, .v3 {
+
+    .v1,
+    .v3 {
         float: left;
         width: 49%;
     }
-    
-    .v2, .v4 {
+
+    .v2,
+    .v4 {
         float: right;
         width: 49%;
     }
-    
-    .cine{
-        display:flow-root;
+
+    .v3,
+    .v4 {
+        margin-top: 5vh;
+    }
+
+    .cine {
+        display: flow-root;
     }
 }
 
