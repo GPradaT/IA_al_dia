@@ -380,7 +380,7 @@ Aplicaciones.html
 
 /****************MediaQueries*****************/
 @media (min-width: 768px) {
-
+    
     #apps {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -389,16 +389,16 @@ Aplicaciones.html
         align-content: center;
         width: 100%;
     }
-
+    
     #apps p {
         font-size: 1.4rem;
     }
-
+    
     .linkto {
         font-size: .9rem;
         font-weight: 700;
     }
-
+    
 }
 
 @media (min-width:1200px) {
@@ -409,25 +409,25 @@ Aplicaciones.html
         justify-content: space-between;
         align-content: space-between;
     }
-
+    
     #apps p {
         font-size: 1.15rem;
     }
-
+    
     #apps .linkto {
         font-size: .75rem;
     }
-
+    
     #apps h3 {
         margin-bottom: 2.2rem;
         line-height: 1.8rem;
         font-size: 2.1rem;
     }
-
+    
     #apps div {
         padding: 2rem;
     }
-
+    
 }
 
 /****************************
