@@ -179,23 +179,24 @@ footer div div {
         padding: 2rem;
     }
 
-    footer div .rrss{
+    footer div .rrss {
         display: inline-block;
         display: contents;
-       margin-bottom: 1rem;
+        margin-bottom: 1rem;
     }
 
     footer .copyright p {
         font-size: 1rem;
     }
-    
+
 }
-@media (min-width:1200px){
-    footer .rrss img{
+
+@media (min-width:1200px) {
+    footer .rrss img {
         margin-bottom: 1rem;
-     }
-    
-     footer .copyright p {
+    }
+
+    footer .copyright p {
         font-size: .8rem;
     }
 }
@@ -376,7 +377,133 @@ Aplicaciones.html
     padding-top: 1.2rem;
 }
 
-/*despacho-42.html*/
+/****************MediaQueries*****************/
+@media (min-width: 768px) {
+    
+    #apps {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 2.5rem;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+    
+    #apps p {
+        font-size: 1.4rem;
+    }
+    
+    .linkto {
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    
+}
+
+@media (min-width:1200px) {
+    #apps {
+        grid-template-columns: repeat(3, 29%);
+        grid-template-rows: auto;
+        gap: 3.5rem;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    
+    #apps p {
+        font-size: 1.15rem;
+    }
+    
+    #apps .linkto {
+        font-size: .75rem;
+    }
+    
+    #apps h3 {
+        margin-bottom: 2.2rem;
+        line-height: 1.8rem;
+        font-size: 2.1rem;
+    }
+    
+    #apps div {
+        padding: 2rem;
+    }
+    
+}
+
+/****************************
+en-el-cine.html
+*****************************/
+
+.video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cine blockquote {
+    padding: 1.2rem 1rem;
+    background-color: var(--bg-color);
+    font-size: 1.18rem;
+    margin-bottom: 3vh;
+}
+
+.cine blockquote cite:first-of-type {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.cine blockquote cite:last-of-type {
+    font-style: normal;
+}
+
+@media (min-width:768px) {
+    .cine blockquote {
+        margin-bottom: 2vh;
+        font-size: 1.26rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .cine blockquote {
+        font-size: 1rem;
+    }
+
+    .v1,
+    .v3 {
+        float: left;
+        width: 49%;
+    }
+
+    .v2,
+    .v4 {
+        float: right;
+        width: 49%;
+    }
+
+    .v3,
+    .v4 {
+        margin-top: 5vh;
+    }
+
+    .cine {
+        display: flow-root;
+    }
+}
+
+/****************************
+en-el-cine.html
+*****************************/
 #breadcrumb .breadcrumb li {
     font-weight: 400;
 }
@@ -392,64 +519,10 @@ Aplicaciones.html
     content: ">";
 }
 
-/****************MediaQueries*****************/
 /****************************
-Media Screens
+Media Screens Generales, REVISAR
 *****************************/
-@media (min-width: 768px) {
-
-    #apps {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 2.5rem;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
-    }
-
-    #apps p {
-        font-size: 1.4rem;
-    }
-    
-    .linkto {
-        font-size: .9rem;
-        font-weight: 700;
-    }
-    
-}
-
-@media (min-width:1200px){
-    #apps {
-        display: grid;
-        grid-template-columns: repeat(3, 29%);
-        grid-template-rows: auto;
-        gap: 3.5rem;
-        justify-content: space-between;
-        align-content: space-between;
-       
-    }   
-
-    #apps p {
-        font-size: 1.15rem;
-    }
-
-    #apps .linkto {
-        font-size: .75rem;
-    }
-
-    #apps h3 {
-        margin-bottom: 2.2rem;
-        line-height: 1.8rem;
-        font-size: 2.1rem;
-    }
-    
-    #apps div {
-        padding: 2rem;
-    }
-
-}
-
+/* Revvisar si se puede quitar el div que contiene el ul del*/
 @media (min-width: 1200px) {
 
     /********General********/
@@ -516,7 +589,7 @@ Media Screens
     }
 
     footer img:not(:last-child) {
-        
+
         margin-bottom: .8rem;
         margin-top: 0;
     }
