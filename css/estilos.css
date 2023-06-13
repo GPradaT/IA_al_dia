@@ -30,20 +30,6 @@ body {
     line-height: 1.5;
 }
 
-.sticky {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: var(--secondary-color);
-    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .7);
-}
-
 abbr {
     text-decoration: none;
 }
@@ -55,6 +41,11 @@ h2 {
     line-height: 1;
     font-size: 2.4rem;
     font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
 }
 
 p {
@@ -71,20 +62,32 @@ blockquote {
     width: 92%;
 }
 
-/************************EstilosCabecera**********************/
+/**********************
+EstilosCabecera y Menú
+**********************/
 h1 {
     text-align: center;
     font-size: 4rem;
     margin-top: 1.2rem;
 }
 
-h1 span:only-of-type {
+h1 span {
     font-weight: 400;
     letter-spacing: -.47rem;
 }
 
-.sticky ul {
-    padding: 1.1rem 0;
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .7);
 }
 
 nav li {
@@ -95,8 +98,9 @@ nav li {
     line-height: 2rem;
 }
 
-/****************************Links**************************/
-a {
+/***********Links************/
+a,
+.active {
     color: var(--contrast-color);
     text-decoration: none;
 }
@@ -111,6 +115,11 @@ h1 a:hover {
     color: var(--hover-nav-logo);
 }
 
+a.under:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+}
+
 footer a {
     color: var(--secondary-color);
 }
@@ -121,11 +130,6 @@ footer a:hover {
 
 footer img:hover {
     opacity: .7;
-}
-
-.active,
-.active a {
-    color: var(--contrast-color);
 }
 
 
@@ -145,11 +149,6 @@ footer p {
     font-size: 1rem;
 }
 
-footer ul {
-    list-style-type: none;
-    margin-left: 0;
-}
-
 footer div div {
     margin: 1rem auto;
 }
@@ -164,13 +163,8 @@ footer div div {
         font-size: 1.7vw;
     }
 
-    .sticky ul {
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
-    }
-
     .container {
-        max-width: 92%;
+        max-width: 91%;
     }
 
     p {
@@ -194,12 +188,88 @@ footer div div {
 
 }
 
-@media (min-width:1200px) {
-    footer .rrss img {
+@media (orientation: landscape) and (max-width:1199px) {
+    nav.sticky {
+        text-align: center;
+    }
+
+    nav.sticky ul li {
+        display: inline;
+    }
+
+    nav.sticky ul li:not(:last-of-type) {
+        margin-right: 1.35rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    html {
+        font-size: 0.945vw;
+    }
+
+    h1 {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    .sticky {
+        justify-content: flex-start;
+        height: 3.960vw;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 1.35rem;
+        font-size: 1.08rem;
+    }
+
+    .container {
+        max-width: 69%;
+    }
+
+    p {
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+
+    footer {
+        margin-top: 5rem;
+        padding-top: 2.1rem;
+        padding-bottom: 1.9rem;
+        font-size: .9rem;
+        text-align: left;
+    }
+
+    footer p {
+        line-height: 0.4;
+        font-size: .8rem;
+    }
+
+    footer li {
+        display: inline;
+    }
+
+    footer li:not(:last-of-type)::after {
+        content: "·";
+        padding: 0 .5rem;
+    }
+
+    footer img:not(:last-child) {
+
+        margin-bottom: .8rem;
+        margin-top: 0;
+    }
+
+    .rrss img {
         margin-bottom: 1rem;
     }
 
-    footer .copyright p {
+    .copyright p {
         font-size: .8rem;
     }
 }
@@ -243,27 +313,22 @@ index.html
     width: 81%;
 }
 
-#noticias article img {
+article img {
     width: 100%;
 }
 
-#noticias p.fecha {
+p.fecha {
     margin-top: 1rem;
     font-size: 1.15rem;
 }
 
-#noticias a {
-    text-decoration: none;
-}
-
 #noticias h3 {
     font-size: 1.69rem;
-    line-height: 2rem;
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
-#noticias article p:last-of-type {
+article p:last-of-type {
     margin-top: 1rem;
     font-size: 1.18rem;
 }
@@ -273,8 +338,8 @@ article a:hover,
     color: var(--primary-color);
 }
 
-
-.linkto::before {
+.linkto::before,
+.to::before {
     content: ">";
     padding-right: .5rem;
     font-weight: 400;
@@ -302,13 +367,19 @@ article a:hover,
         margin-top: 2.4rem;
     }
 
+    #inicio h2 {
+        margin-bottom: 1.55rem;
+        margin-top: 2.3rem;
+        text-align: center;
+    }
+
     #noticias {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         column-gap: 3.5%;
         margin-top: 1rem;
-        width: 94%;
+        width: 95%;
     }
 
     #noticias p.fecha {
@@ -331,6 +402,47 @@ article a:hover,
     }
 }
 
+@media (min-width: 1200px) {
+    .intro {
+        margin: 0 auto;
+        max-width: 73%;
+    }
+
+    .lema {
+        background-image: url(../img/bg-hero-home.jpg);
+        line-height: 1;
+        height: 26.2rem;
+    }
+
+    .lema p {
+        font-size: 5.3rem;
+        max-width: 70%;
+    }
+
+    #noticias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-content: space-between;
+        column-gap: 2.3rem;
+        width: 95%;
+    }
+
+    #noticias h3 {
+        font-size: 1.5rem;
+    }
+
+    #noticias article p.fecha {
+        font-size: .9rem;
+    }
+
+    #noticias article p:last-of-type {
+        margin-top: 1rem;
+        font-size: 1.05rem;
+    }
+
+}
+
 /****************************
 Aplicaciones.html
 *****************************/
@@ -342,13 +454,10 @@ Aplicaciones.html
     width: 100%;
 }
 
-.aplicaciones section h2 {
-    margin-top: 3rem;
-    font-size: 2.37rem;
-}
-
-#apps a {
-    text-decoration: none;
+#apps div {
+    padding: 2.5rem;
+    background-color: var(--bg-color);
+    font-size: 1.18rem;
 }
 
 #apps h3 {
@@ -357,57 +466,26 @@ Aplicaciones.html
     font-size: 2rem;
 }
 
-#apps div {
-    padding: 2.5rem;
-    background-color: var(--bg-color);
-    font-size: 1.18rem;
-}
-
-#apps .linkto:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-#apps .linkto::before {
-    content: ">";
-    padding-right: .5rem;
-    font-weight: 400;
-}
-
-#apps .linkto {
-    font-size: .93rem;
-    font-weight: 700;
-    padding-top: 1.2rem;
-}
-
 /****************MediaQueries*****************/
 @media (min-width: 768px) {
-
     #apps {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 47%);
         grid-template-rows: auto;
-        gap: 2.5rem;
-        justify-content: center;
+        justify-content: space-between;
         align-content: center;
         width: 100%;
     }
 
     #apps p {
-        font-size: 1.4rem;
+        font-size: 1.36rem;
     }
-
-    .linkto {
-        font-size: .9rem;
-        font-weight: 700;
-    }
-
 }
 
 @media (min-width:1200px) {
     #apps {
         grid-template-columns: repeat(3, 29%);
         grid-template-rows: auto;
-        gap: 3.5rem;
+        row-gap: 4.5rem;
         justify-content: space-between;
         align-content: space-between;
     }
@@ -418,12 +496,6 @@ Aplicaciones.html
 
     #apps .linkto {
         font-size: .75rem;
-    }
-
-    #apps h3 {
-        margin-bottom: 2.2rem;
-        line-height: 1.8rem;
-        font-size: 2.1rem;
     }
 
     #apps div {
@@ -460,15 +532,6 @@ en-el-cine.html
     margin-bottom: 3vh;
 }
 
-.cine blockquote cite:first-of-type {
-    font-weight: 700;
-    font-style: italic;
-}
-
-.cine blockquote cite:last-of-type {
-    font-style: normal;
-}
-
 @media (min-width:768px) {
     .cine blockquote {
         margin-bottom: 2vh;
@@ -496,7 +559,7 @@ en-el-cine.html
 
     .v3,
     .v4 {
-        margin-top: 5vh;
+        margin-top: 2vh;
     }
 
     .cine {
@@ -507,6 +570,29 @@ en-el-cine.html
 /****************************
 despacho-42.html
 *****************************/
+.nav {
+    grid-area: nav;
+}
+
+.articulo {
+    grid-area: articulo;
+}
+
+.aside {
+    grid-area: aside;
+
+}
+
+#ds42 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "articulo"
+        "aside";
+}
+
 .breadcrumb li {
     display: inline-flex;
     list-style: none;
@@ -516,7 +602,7 @@ despacho-42.html
 
 .breadcrumb li:not(:first-child)::before {
     display: inline;
-    content: ">";
+    content: " > ";
     padding: 0 .2rem;
 }
 
@@ -529,168 +615,186 @@ cite.titulo {
     font-weight: 700;
 }
 
-#ds42 figure img {
+figure img {
     max-width: 100%;
 }
 
-#ds42 figcaption>p {
+figcaption {
     margin: 1.1rem 0;
-    font-size: .9rem;
 
 }
 
 #ds42 h2 {
     text-align: left;
-    padding: .6rem 0;
+    padding: .4rem 0;
 }
 
-#ds42 h3 {
-    font-size: 1.65rem;
+.articulo h3 {
+    font-size: 1.7rem;
     line-height: 1.2;
 }
 
-#ds42 h4 {
-    font-size: 1.5rem;
+h4 {
+    font-size: 1.53rem;
     line-height: 1.2;
 }
 
-#ds42 p,
-#ds42 blockquote {
+article cite:last-of-type {
+    font-size: 1.05rem;
+}
+
+#ds42 p {
     margin: 1.2rem 0;
     font-size: 1.18rem;
 }
 
 #ds42 blockquote {
-    margin: 1rem auto;
+    display: grid;
     padding: 2.5ch;
+    margin-top: 4rem;
 }
 
-blockquote>ul {
-    list-style-type: none;
+blockquote>img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
 }
 
-.to::before {
-    content: ">";
-    padding-right: .5rem;
+blockquote ul {
+    font-size: 1.1rem;
+    padding-top: 1.5rem;
 }
 
-/****************************
-Media Screens Generales, REVISAR
-*****************************/
-/* Revvisar si se puede quitar el div que contiene el ul del*/
+legend {
+    margin: 1rem 0;
+}
+
+label,
+input,
+textarea {
+    font-size: 1.4rem;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: none;
+    min-height: 3.5rem;
+}
+
+input,
+textarea {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 12rem;
+}
+
+button {
+    display: block;
+    font-size: .9rem;
+    padding: .5rem;
+    color: var(--secondary-color);
+    background-color: var(--contrast-color);
+    border: none;
+}
+
+aside article {
+    display: flow-root;
+    padding: 1rem 0;
+    border-bottom: 1px dotted black;
+}
+
+aside h3,
+#ds42 aside p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+aside article img {
+    float: left;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+
+@media (min-width: 768px) {
+    #ds42 blockquote {
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 1vw;
+
+    }
+
+}
+
 @media (min-width: 1200px) {
 
-    /********General********/
-    html {
-        font-size: 0.945vw;
-    }
-
-    p {
-        font-size: 1.75rem;
-        font-weight: 400;
-    }
-
-    h1 {
-        text-align: left;
-        margin-bottom: 0;
-    }
-
-    h2 {
-        margin-bottom: 1.55rem;
-        margin-top: 2.3rem;
-        text-align: center;
-        font-size: 2.1rem;
-    }
-
-    .sticky {
-        justify-content: flex-start;
-        height: 3.960vw;
-    }
-
-    nav ul li {
-        display: inline;
-        margin-right: 1.35rem;
-        font-size: 1.08rem;
-    }
-
-    .container {
-        max-width: 69%;
-    }
-
-    footer {
-        margin-top: 5rem;
-        padding-top: 2.1rem;
-        padding-bottom: 1.9rem;
-        font-size: .9rem;
-        text-align: left;
-    }
-
-    footer p {
-        line-height: 0.4;
+    .breadcrumb li,
+    figure>figcaption>cite:last-of-type {
+        margin: 2rem 0;
         font-size: .8rem;
     }
 
-    footer li {
-        display: inline;
+    #ds42 {
+        grid-template-columns: 10fr 4fr;
+        grid-column-gap: 6%;
+        row-gap: 0;
+        grid-template-areas:
+            "nav           ."
+            "articulo  aside"
+            "articulo      .";
     }
 
-    footer li:not(:last-of-type)::after {
-        content: "·";
-        padding: 0 .5rem;
+    h4 {
+        font-size: 1.3rem;
     }
 
-    footer li::after {
-        content: "";
+    #ds42 p {
+        margin: 1.2rem 0;
+        font-size: 1.1rem;
     }
 
-    footer img:not(:last-child) {
+    #ds42 blockquote {
+        padding: 4ch;
+    }
 
-        margin-bottom: .8rem;
+    #ds42 blockquote h2 {
         margin-top: 0;
     }
 
-    /********index.html********/
-    .intro {
-        margin: 0 auto;
-        max-width: 73%;
+    blockquote>img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1rem;
     }
 
-    .lema {
-        background-image: url(../img/bg-hero-home.jpg);
-        line-height: 1;
-        height: 26.2rem;
+    aside h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 
-    .lema p {
-        font-size: 5.3rem;
-        max-width: 70%;
-    }
-
-    #noticias {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        justify-content: space-between;
-        column-gap: 2.3rem;
-        width: 95%;
-    }
-
-    #noticias h3 {
-        font-size: 1.5rem;
-    }
-
-    #noticias p.fecha {
+    #ds42 aside article p {
         font-size: .9rem;
     }
 
-    #noticias article p:last-of-type {
-        margin-top: 1rem;
-        font-size: 1.05rem;
+    .aside article h3,
+    legend {
+        font-size: .9rem;
     }
 
-    #noticias .linkto {
-        font-size: .7rem;
-        font-weight: 700;
+    .aside article img {
+        width: 5rem;
+        height: 5rem;
     }
 
+    label,
+    input,
+    textarea {
+        font-size: 1.1rem;
+    }
 }
