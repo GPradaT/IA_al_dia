@@ -83,10 +83,6 @@ h1 span:only-of-type {
     letter-spacing: -.47rem;
 }
 
-.sticky ul {
-    padding: 1.1rem 0;
-}
-
 nav li {
     display: flex;
     justify-content: center;
@@ -159,14 +155,27 @@ footer div div {
 }
 
 /****************MediasGenerales*****************/
+@media (orientation: landscape) and (max-width:1199px) {
+    nav.sticky {
+        text-align: center;
+    }
+
+    nav.sticky ul li {
+        display: inline;
+    }
+
+    nav.sticky ul li:not(:last-of-type) {
+        margin-right: 1.35rem;
+    }
+
+    nav.sticky ul {
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 1.7vw;
-    }
-
-    .sticky ul {
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
     }
 
     .container {
@@ -516,7 +525,7 @@ despacho-42.html
 
 .breadcrumb li:not(:first-child)::before {
     display: inline;
-    content: ">";
+    content: " > ";
     padding: 0 .2rem;
 }
 
@@ -541,7 +550,7 @@ cite.titulo {
 
 #ds42 h2 {
     text-align: left;
-    padding: .6rem 0;
+    padding: .4rem 0;
 }
 
 #ds42 h3 {
@@ -554,24 +563,113 @@ cite.titulo {
     line-height: 1.2;
 }
 
-#ds42 p,
-#ds42 blockquote {
+#ds42 article cite:last-of-type {
+    font-size: 1.05rem;
+}
+
+#ds42 p {
     margin: 1.2rem 0;
     font-size: 1.18rem;
 }
 
 #ds42 blockquote {
-    margin: 1rem auto;
+    display: grid;
     padding: 2.5ch;
 }
 
-blockquote>ul {
+blockquote>img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+}
+
+blockquote ul {
     list-style-type: none;
+    font-size: 1.1rem;
+    padding-top: 1.5rem;
 }
 
 .to::before {
     content: ">";
     padding-right: .5rem;
+}
+
+legend {
+    margin: 1rem 0;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: none;
+    min-height: 3.5rem;
+    font-size: 1.4rem;
+}
+
+input,
+textarea {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 12rem;
+}
+
+button {
+    display: block;
+    font-size: .9rem;
+    padding: .5rem;
+    color: var(--secondary-color);
+    background-color: var(--contrast-color);
+    border: none;
+}
+
+#ds42 aside div {
+    display: flow-root;
+    padding: 1rem 0;
+    border-bottom: 1px dotted black;
+}
+
+#ds42 aside div h3,
+#ds42 aside div p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+aside div img {
+    float: left;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+
+@media (min-width: 768px) {
+    #ds42 blockquote {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 1vw;
+
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #ds42 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    aside {
+        width: 100%;
+    }
 }
 
 /****************************
@@ -637,10 +735,6 @@ Media Screens Generales, REVISAR
     footer li:not(:last-of-type)::after {
         content: "·";
         padding: 0 .5rem;
-    }
-
-    footer li::after {
-        content: "";
     }
 
     footer img:not(:last-child) {
