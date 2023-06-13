@@ -132,7 +132,6 @@ footer img:hover {
     opacity: .7;
 }
 
-
 /*******************EstilosPieDePágina**********************/
 footer {
     width: 100%;
@@ -723,13 +722,19 @@ aside article img {
 }
 
 
+
 @media (min-width: 768px) {
     #ds42 blockquote {
         grid-template-columns: 1fr auto;
         grid-column-gap: 1vw;
-
     }
+}
 
+@media (min-width: 768px) and (max-width: 1190px) {
+    .aside {
+        width: 57vw;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1200px) {
