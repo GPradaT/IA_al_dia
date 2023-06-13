@@ -728,6 +728,10 @@ aside article img {
         grid-template-columns: 1fr auto;
         grid-column-gap: 1vw;
     }
+
+    #ds42 blockquote h2 {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1190px) {
@@ -768,9 +772,6 @@ aside article img {
         padding: 4ch;
     }
 
-    #ds42 blockquote h2 {
-        margin-top: 0;
-    }
 
     blockquote>img {
         width: 5rem;
