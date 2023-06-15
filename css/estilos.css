@@ -87,7 +87,7 @@ h1 span {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: var(--secondary-color);
-    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .7);
+    box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .2);
 }
 
 nav li {
@@ -136,8 +136,7 @@ footer img:hover {
 footer {
     width: 100%;
     margin-top: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 2vh;
+    padding: 3rem 0;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-size: 1.2rem;
@@ -148,8 +147,12 @@ footer p {
     font-size: 1rem;
 }
 
-footer div div {
+footer div {
     margin: 1rem auto;
+}
+
+div.rrss {
+    margin-bottom: 2rem;
 }
 
 .copyright {
@@ -309,7 +312,7 @@ index.html
     grid-template-rows: auto;
     row-gap: 3.55rem;
     margin: 0 auto;
-    width: 81%;
+    width: 80%;
 }
 
 article img {
@@ -322,16 +325,18 @@ p.fecha {
 }
 
 #noticias h3 {
-    font-size: 1.69rem;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    font-size: 1.72rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    line-height: 1.2;
 }
 
-article p:last-of-type {
+#noticias article p:last-of-type {
     margin-top: 1rem;
     font-size: 1.18rem;
 }
 
+/*da color al hover de de los links de los links del apartado de notícias de index y los links de las web de las IA en aplicaciones*/
 article a:hover,
 .linkto:hover {
     color: var(--primary-color);
@@ -373,7 +378,6 @@ article a:hover,
     }
 
     #noticias {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         column-gap: 3.5%;
