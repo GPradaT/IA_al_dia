@@ -99,8 +99,7 @@ nav li {
 }
 
 /***********Links************/
-a,
-.active a {
+a {
     color: var(--contrast-color);
     text-decoration: none;
 }
@@ -108,6 +107,11 @@ a,
 h1 a,
 nav a {
     color: var(--primary-color);
+}
+
+.active,
+.active a {
+    color: var(--contrast-color);
 }
 
 nav a:hover,
