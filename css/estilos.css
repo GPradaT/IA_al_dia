@@ -100,7 +100,7 @@ nav li {
 
 /***********Links************/
 a,
-.active {
+.active a {
     color: var(--contrast-color);
     text-decoration: none;
 }
