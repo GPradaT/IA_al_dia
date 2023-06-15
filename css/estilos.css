@@ -167,7 +167,7 @@ footer div div {
     }
 
     p {
-        font-size: 1.75rem;
+        font-size: 1.36rem;
     }
 
     footer {
@@ -176,9 +176,7 @@ footer div div {
     }
 
     footer div .rrss {
-        display: inline-block;
-        display: contents;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     footer .copyright p {
@@ -232,7 +230,7 @@ footer div div {
     }
 
     p {
-        font-size: 1.75rem;
+        font-size: 1.15rem;
         font-weight: 400;
     }
 
@@ -322,14 +320,14 @@ p.fecha {
 }
 
 #noticias h3 {
-    font-size: 1.69rem;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    font-size: 1.75rem;
+    margin: .9em 0;
+    line-height: 1.2;
 }
 
-article p:last-of-type {
+#noticias article p:last-of-type {
     margin-top: 1rem;
-    font-size: 1.18rem;
+    font-size: 1.19rem;
 }
 
 article a:hover,
@@ -364,6 +362,10 @@ article a:hover,
     .intro {
         margin-bottom: 1.55rem;
         margin-top: 2.4rem;
+    }
+
+    .intro p {
+        font-size: 1.75rem;
     }
 
     #inicio h2 {
@@ -418,6 +420,10 @@ article a:hover,
         max-width: 70%;
     }
 
+    .intro p {
+        font-size: 1.75rem;
+    }
+
     #noticias {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -439,7 +445,6 @@ article a:hover,
         margin-top: 1rem;
         font-size: 1.05rem;
     }
-
 }
 
 /****************************
@@ -474,10 +479,6 @@ Aplicaciones.html
         align-content: center;
         width: 100%;
     }
-
-    #apps p {
-        font-size: 1.36rem;
-    }
 }
 
 @media (min-width:1200px) {
@@ -489,10 +490,6 @@ Aplicaciones.html
         align-content: space-between;
     }
 
-    #apps p {
-        font-size: 1.15rem;
-    }
-
     #apps .linkto {
         font-size: .75rem;
     }
@@ -500,7 +497,6 @@ Aplicaciones.html
     #apps div {
         padding: 2rem;
     }
-
 }
 
 /****************************
@@ -579,17 +575,6 @@ despacho-42.html
 
 .aside {
     grid-area: aside;
-
-}
-
-#ds42 {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "nav"
-        "articulo"
-        "aside";
 }
 
 .breadcrumb li {
@@ -638,13 +623,13 @@ h4 {
     line-height: 1.2;
 }
 
-article cite:last-of-type {
+.last .under {
     font-size: 1.05rem;
 }
 
 #ds42 p {
     margin: 1.2rem 0;
-    font-size: 1.18rem;
+    font-size: 1.182rem;
 }
 
 #ds42 blockquote {
@@ -724,9 +709,23 @@ aside article img {
 
 
 @media (min-width: 768px) {
+
+    #ds42 p {
+        font-size: 1.245rem;
+    }
+
     #ds42 blockquote {
         grid-template-columns: 1fr auto;
-        grid-column-gap: 1vw;
+        grid-column-gap: 4%;
+    }
+
+    #ds42 blockquote h2 {
+        margin: 0;
+    }
+
+    blockquote>img {
+        width: 5rem;
+        height: 5rem;
     }
 
     #ds42 blockquote h2 {
@@ -750,6 +749,7 @@ aside article img {
     }
 
     #ds42 {
+        display: grid;
         grid-template-columns: 10fr 4fr;
         grid-column-gap: 6%;
         row-gap: 0;
