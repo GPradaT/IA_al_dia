@@ -263,7 +263,7 @@ div.rrss {
         text-align: left;
     }
 
-    footer p {
+    footer .copyright p {
         line-height: 0.4;
         font-size: .8rem;
     }
@@ -550,7 +550,7 @@ cite.titulo {
 
 .cine blockquote {
     padding: 1.2rem 1rem;
-    font-size: 1.18rem;
+    font-size: 1.19rem;
     margin-bottom: 3vh;
 }
 
@@ -577,11 +577,6 @@ cite.titulo {
     .v4 {
         float: right;
         width: 49%;
-    }
-
-    .v3,
-    .v4 {
-        margin-top: 2vh;
     }
 
     .cine {
