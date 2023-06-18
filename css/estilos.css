@@ -28,6 +28,15 @@ body {
     line-height: 1.5;
 }
 
+.sr {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 abbr {
     text-decoration: none;
 }
@@ -185,7 +194,7 @@ div.rrss {
         margin: 0 auto 1rem;
     }
 
-    footer .copyright p {
+    .copyright p {
         font-size: 1rem;
     }
 
@@ -274,10 +283,6 @@ div.rrss {
 
     .rrss a:last-child img {
         width: 28%;
-    }
-
-    .copyright p {
-        font-size: .8rem;
     }
 }
 
