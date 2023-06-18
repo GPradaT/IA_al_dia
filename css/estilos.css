@@ -166,6 +166,14 @@ div.rrss {
     margin-bottom: 2rem;
 }
 
+.rrss a img {
+    width: 1.8rem;
+}
+
+.rrss a:last-child img {
+    width: 2.2rem;
+}
+
 .copyright {
     line-height: .5;
 }
@@ -192,6 +200,14 @@ div.rrss {
     footer div .rrss {
         display: inline-block;
         margin: 0 auto 1rem;
+    }
+
+    .rrss a img {
+        width: 1.5rem;
+    }
+
+    .rrss a:last-child img {
+        width: 1.9rem;
     }
 
     .copyright p {
@@ -275,14 +291,6 @@ div.rrss {
     footer li:not(:last-of-type)::after {
         content: "·";
         padding: 0 .5rem;
-    }
-
-    .rrss a img {
-        width: 23%;
-    }
-
-    .rrss a:last-child img {
-        width: 28%;
     }
 }
 
@@ -577,6 +585,11 @@ cite.titulo {
     .v4 {
         float: right;
         width: 49%;
+    }
+
+    .v3,
+    .v4 {
+        margin-top: 2rem;
     }
 
     .cine {
