@@ -162,28 +162,26 @@
             <form action="#" method="post">
                 <h2>Deja un comentario</h2>
                 <p class="obligatorio">Todos los campos son obligatorios</p>
-                <fieldset>
-                    <ul>
-                        <li>
-                            <label>Mensaje</label>
-                            <textarea name="comentario" rows="8" required></textarea>
-                        </li>
-                        <li>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" title="Solo caracteres alfabéticos. Un mínimo de 2 y un máximo de 64 caracteres" required>
-                        <li>
-                            <label for="mail">Correo electrónico</label>
-                            <input type="email" id="mail" name="user_mail" required>
-                        </li>
-                        <li>
-                            <input type="checkbox" required>
-                            <label> He leído y acepto la <a href="#">Política de privacidad</a></label>
-                        </li>
-                        <li>
-                            <button type="submit">Enviar el comentario</button>
-                        </li>
-                    </ul>
-                </fieldset>
+                <ul>
+                    <li>
+                        <label>Mensaje</label>
+                        <textarea name="comentario" rows="8" required></textarea>
+                    </li>
+                    <li>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" title="Solo caracteres alfabéticos. Un mínimo de 2 y un máximo de 64 caracteres" required>
+                    <li>
+                        <label for="mail">Correo electrónico</label>
+                        <input type="email" id="mail" name="user_mail" pattern="[a-zA-Z0-9_-]([\.]?[a-zA-Z0-9_-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" required>
+                    </li>
+                    <li>
+                        <input type="checkbox" required>
+                        <label> He leído y acepto la <a href="#">Política de privacidad</a></label>
+                    </li>
+                    <li>
+                        <button type="submit">Enviar el comentario</button>
+                    </li>
+                </ul>
             </form>
         </article>
         <aside class="aside">

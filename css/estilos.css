@@ -28,19 +28,6 @@ body {
     line-height: 1.5;
 }
 
-.sr {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-abbr {
-    text-decoration: none;
-}
-
 h2 {
     margin-bottom: 2.4rem;
     margin-top: 2.4rem;
@@ -50,18 +37,31 @@ h2 {
     font-weight: 700;
 }
 
-ul {
-    list-style-type: none;
-    margin-left: 0;
-}
-
 p {
     font-size: 1.28rem;
     margin-bottom: 1rem;
 }
 
+ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+abbr {
+    text-decoration: none;
+}
+
 blockquote {
     background-color: var(--bg-color);
+}
+
+.sr {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .container {
@@ -69,9 +69,7 @@ blockquote {
     width: 92%;
 }
 
-/**********************
-EstilosCabecera y Menú
-**********************/
+/*************Cabecera-Menú*************/
 h1 {
     text-align: center;
     font-size: 4rem;
@@ -81,6 +79,14 @@ h1 {
 h1 span {
     font-weight: 400;
     letter-spacing: -.47rem;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 2rem;
 }
 
 .sticky {
@@ -97,53 +103,7 @@ h1 span {
     box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, .2);
 }
 
-nav li {
-    display: flex;
-    justify-content: center;
-    font-size: 1.05rem;
-    font-weight: 700;
-    line-height: 2rem;
-}
-
-/***********Links************/
-a {
-    color: var(--contrast-color);
-    text-decoration: none;
-}
-
-h1 a,
-nav a {
-    color: var(--primary-color);
-}
-
-.active,
-.active a {
-    color: var(--contrast-color);
-}
-
-nav a:hover,
-h1 a:hover {
-    color: var(--hover-nav-logo);
-}
-
-a.under:hover {
-    color: var(--contrast-color);
-    text-decoration: underline;
-}
-
-footer a {
-    color: var(--secondary-color);
-}
-
-footer a:hover {
-    color: var(--contrast-color);
-}
-
-footer img:hover {
-    opacity: .7;
-}
-
-/*******************EstilosPieDePágina**********************/
+/*************PieDePágina*************/
 footer {
     width: 100%;
     margin-top: 3rem;
@@ -152,10 +112,6 @@ footer {
     color: var(--secondary-color);
     font-size: 1.2rem;
     text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
 }
 
 footer div {
@@ -174,11 +130,50 @@ div.rrss {
     width: 2.2rem;
 }
 
-.copyright {
-    line-height: .5;
+.copyright p {
+    font-size: 1rem;
+    line-height: .4;
 }
 
-/****************MediasGenerales*****************/
+/*************Enlaces*************/
+a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+h1 a,
+nav a {
+    color: var(--primary-color);
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+.active,
+.active a {
+    color: var(--contrast-color);
+}
+
+nav a:hover,
+h1 a:hover {
+    color: var(--hover-nav-logo);
+}
+
+footer a:hover {
+    color: var(--contrast-color);
+}
+
+footer img:hover {
+    opacity: .7;
+}
+
+a.under:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+}
+
+/*************MediaQueries*************/
 @media (min-width: 768px) {
     html {
         font-size: 1.7vw;
@@ -189,17 +184,7 @@ div.rrss {
     }
 
     footer {
-        margin-top: 4rem;
-        padding: 2rem;
-    }
-
-    footer div {
-        margin: 1rem auto;
-    }
-
-    footer div .rrss {
-        display: inline-block;
-        margin: 0 auto 1rem;
+        font-size: 1rem;
     }
 
     .rrss a img {
@@ -211,9 +196,8 @@ div.rrss {
     }
 
     .copyright p {
-        font-size: 1rem;
+        font-size: .8rem;
     }
-
 }
 
 @media (orientation: landscape) and (max-width: 767px) {
@@ -251,37 +235,15 @@ div.rrss {
         font-size: 2.1rem;
     }
 
-    .sticky {
-        justify-content: flex-start;
-        height: 3.960vw;
-    }
-
     nav ul li {
         display: inline;
         margin-right: 1.35rem;
         font-size: 1.08rem;
     }
 
-    .container {
-        max-width: 68%;
-    }
-
-    p {
-        font-size: 1.75rem;
-        font-weight: 400;
-    }
-
     footer {
-        margin-top: 5rem;
-        padding-top: 2.1rem;
-        padding-bottom: 1.9rem;
         font-size: .9rem;
         text-align: left;
-    }
-
-    footer .copyright p {
-        line-height: 0.4;
-        font-size: .8rem;
     }
 
     footer li {
@@ -292,15 +254,26 @@ div.rrss {
         content: "·";
         padding: 0 .5rem;
     }
+
+    .container {
+        max-width: 68%;
+    }
+
+    .sticky {
+        justify-content: flex-start;
+        height: 3.960vw;
+    }
+
+    .copyright p {
+        font-size: .78rem;
+    }
 }
 
 /****************************
 index.html
 *****************************/
 #inicio {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    margin-bottom: 4rem;
 }
 
 .lema {
@@ -344,8 +317,7 @@ p.fecha {
 
 #noticias h3 {
     font-size: 1.72rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
     line-height: 1.2;
 }
 
@@ -354,7 +326,11 @@ p.fecha {
     font-size: 1.18rem;
 }
 
-/*da color al hover de de los links de los links del apartado de notícias de index y los links de las web de las IA en aplicaciones*/
+.linkto {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 article a:hover,
 .linkto:hover {
     color: var(--primary-color);
@@ -367,10 +343,6 @@ article a:hover,
     font-weight: 400;
 }
 
-.linkto {
-    font-size: 1rem;
-    font-weight: 700;
-}
 
 /****************MediaQuery*****************/
 @media (min-width: 768px) {
@@ -384,32 +356,21 @@ article a:hover,
         max-width: 80%;
     }
 
-    .intro {
-        margin-bottom: 1.55rem;
-        margin-top: 2.4rem;
-    }
-
     #inicio h2 {
         margin-bottom: 1.55rem;
-        margin-top: 2.3rem;
-        text-align: center;
     }
 
     #noticias {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
         column-gap: 3.5%;
-        margin-top: 1rem;
         width: 95%;
     }
 
-    #noticias p.fecha {
-        margin-top: 1rem;
+    p.fecha {
         font-size: 1.2rem;
     }
 
     #noticias h3 {
-        margin: 1rem 0;
         font-size: 1.75rem;
     }
 
@@ -419,11 +380,14 @@ article a:hover,
 
     .linkto {
         font-size: .9rem;
-        font-weight: 700;
     }
 }
 
 @media (min-width: 1200px) {
+    #inicio {
+        margin-bottom: 5rem;
+    }
+
     .intro {
         margin: 0 auto;
         max-width: 73%;
@@ -441,27 +405,24 @@ article a:hover,
     }
 
     #noticias {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        justify-content: space-between;
         column-gap: 2.3rem;
-        width: 95%;
     }
 
     #noticias h3 {
         font-size: 1.5rem;
     }
 
-    #noticias article p.fecha {
+    p.fecha {
         font-size: .9rem;
     }
 
     #noticias article p:last-of-type {
-        margin-top: 1rem;
         font-size: 1.05rem;
     }
 
+    .linkto {
+        font-size: .75rem;
+    }
 }
 
 /****************************
@@ -470,7 +431,6 @@ Aplicaciones.html
 #apps {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     row-gap: 2.5rem;
     width: 100%;
 }
@@ -491,7 +451,6 @@ Aplicaciones.html
 @media (min-width: 768px) {
     #apps {
         grid-template-columns: repeat(2, 47%);
-        grid-template-rows: auto;
         justify-content: space-between;
         align-content: center;
         width: 100%;
@@ -505,7 +464,6 @@ Aplicaciones.html
 @media (min-width:1200px) {
     #apps {
         grid-template-columns: repeat(3, 30%);
-        grid-template-rows: auto;
         row-gap: 4.5rem;
         justify-content: space-between;
         align-content: space-between;
@@ -513,10 +471,6 @@ Aplicaciones.html
 
     #apps p {
         font-size: 1.15rem;
-    }
-
-    #apps .linkto {
-        font-size: .75rem;
     }
 
     #apps div {
@@ -547,6 +501,10 @@ en-el-cine.html
     border: none;
 }
 
+.space {
+    opacity: 0;
+}
+
 cite.autor {
     font-style: normal;
 }
@@ -559,7 +517,7 @@ cite.titulo {
 .cine blockquote {
     padding: 1.2rem 1rem;
     font-size: 1.19rem;
-    margin-bottom: 3vh;
+    margin-bottom: 2.2vh;
 }
 
 @media (min-width:768px) {
@@ -567,29 +525,25 @@ cite.titulo {
         margin-bottom: 2vh;
         font-size: 1.26rem;
     }
-
 }
 
 @media (min-width: 1200px) {
     .cine blockquote {
-        font-size: 1rem;
+        font-size: .895rem;
     }
 
-    .v1,
-    .v3 {
+    .v-left {
         float: left;
         width: 49%;
     }
 
-    .v2,
-    .v4 {
+    .v-right {
         float: right;
         width: 49%;
     }
 
-    .v3,
-    .v4 {
-        margin-top: 2rem;
+    .v-bottom {
+        margin-top: 1.2rem;
     }
 
     .cine {
@@ -609,8 +563,9 @@ despacho-42.html
 
 .breadcrumb li:not(:first-child)::before {
     display: inline;
-    content: " > ";
-    padding: 0 .2rem;
+    content: ">";
+    padding: 0 .4rem;
+    color: var(--primary-color);
 }
 
 figure img {
@@ -670,10 +625,6 @@ form li {
     list-style-type: none;
 }
 
-fieldset {
-    border: none;
-}
-
 label,
 input,
 textarea {
@@ -705,13 +656,13 @@ input[type="checkbox"]+label {
 button {
     display: inline-block;
     width: auto;
-    margin: 1rem 0;
-    padding: .7rem;
+    margin: 0;
+    padding: .55rem;
     background-color: var(--contrast-color);
     color: var(--secondary-color);
     border: none;
     text-transform: uppercase;
-    appearance: none;
+    font-size: .9rem;
 }
 
 aside article {
@@ -719,7 +670,11 @@ aside article {
     grid-template-columns: 1fr auto;
     padding: 1rem 0;
     border-bottom: 1px dotted black;
-    line-height: 1.3;
+}
+
+.aside article * {
+    font-size: 1.18rem;
+    line-height: 1.4;
 }
 
 aside article div {
@@ -771,7 +726,6 @@ aside article img {
     blockquote>img {
         width: 5rem;
         height: 5rem;
-        border-radius: 1rem;
         margin-right: 1rem;
     }
 
@@ -779,11 +733,7 @@ aside article img {
         font-size: .9rem;
     }
 
-    .aside article div h3+p {
-        font-size: 1.2rem;
-    }
-
-    .aside article img {
+    aside article img {
         height: 9rem;
         width: 9rem;
     }
@@ -847,12 +797,12 @@ aside article img {
     }
 
     #ds42 .articulo p {
-        font-size: 1.08rem;
+        font-size: 1.0817rem;
     }
 
     article cite.last,
     #ds42 p.obligatorio {
-        font-size: .8rem;
+        font-size: .82rem;
     }
 
     #ds42 blockquote {
@@ -868,6 +818,11 @@ aside article img {
     input,
     textarea {
         font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        margin-bottom: 3rem;
     }
 
     aside h2,
