@@ -600,7 +600,6 @@ article cite.last {
 }
 
 #ds42 blockquote {
-    display: grid;
     padding: 2.5ch;
     margin-top: 4rem;
 }
@@ -673,7 +672,6 @@ aside article {
 .aside article * {
     font-size: 1.18rem;
     line-height: 1.4;
-    color: var(--primary-color);
 }
 
 aside article img {
@@ -686,7 +684,12 @@ aside article div {
     margin: 0 1rem;
 }
 
-aside article *:hover {
+aside article div a {
+    color: var(--primary-color);
+
+}
+
+aside article div a:hover {
     color: var(--hover-nav-logo);
 }
 
@@ -712,6 +715,7 @@ aside article *:hover {
     }
 
     #ds42 blockquote {
+        display: grid;
         grid-template-columns: 1fr auto;
         grid-column-gap: 1vw;
         padding-right: 4ch;
@@ -747,13 +751,13 @@ aside article *:hover {
 @media (min-width: 1200px) {
     #ds42 {
         display: grid;
-        grid-template-columns: 12fr 5fr;
         grid-column-gap: 5.1rem;
         row-gap: 0;
         grid-template-areas:
             "nav           ."
             "articulo  aside"
             "articulo      .";
+        grid-template-columns: 12fr 5fr;
     }
 
     .nav {
@@ -762,7 +766,6 @@ aside article *:hover {
 
     .articulo {
         grid-area: articulo;
-        margin: 0 auto;
     }
 
     .aside {
